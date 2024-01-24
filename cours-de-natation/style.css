@@ -101,3 +101,18 @@ label, legend {
 
     font-size: 1rem;
 }
+
+.main-header-menu .sub-menu .menu-link {
+    color: blue;
+}
+.main-header-menu .sub-menu .menu-link:hover{
+    color: rgb(95, 14, 187);
+    font-weight: bold;
+}
+.ast-desktop .ast-builder-menu-1 .menu-item .sub-menu .menu-link {
+    border-bottom: 1px solid #e9e2e2;
+}
+.ast-page-builder-template .ast-row {
+    margin-left: 15%;
+    margin-right: 15%;
+}
