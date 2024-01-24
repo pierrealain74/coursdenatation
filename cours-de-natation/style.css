@@ -102,12 +102,21 @@ label, legend {
     font-size: 1rem;
 }
 
+/*
+
+Menu
+
+*/
 .main-header-menu .sub-menu .menu-link {
-    color: blue;
+    color: rgb(102, 102, 102);
+    font-weight: bold;
 }
+/* .menu-item.current-menu-item > .menu-link{
+    color: blue;
+} */
 .main-header-menu .sub-menu .menu-link:hover{
     color: rgb(95, 14, 187);
-    font-weight: bold;
+    font-weight: bolder;
 }
 .ast-desktop .ast-builder-menu-1 .menu-item .sub-menu .menu-link {
     border-bottom: 1px solid #e9e2e2;
@@ -115,4 +124,14 @@ label, legend {
 .ast-page-builder-template .ast-row {
     margin-left: 15%;
     margin-right: 15%;
+}
+#menu-item-15{
+    background: linear-gradient(20deg, rgb(241, 164, 20), rgba(226, 148, 3, 0.829) 90% );
+    padding: 1.3rem 0.8rem;
+    border-radius: 0.2rem;
+
+}
+
+.ast-desktop .ast-primary-header-bar .main-header-menu > .menu-item {
+    line-height: 15px;
 }
