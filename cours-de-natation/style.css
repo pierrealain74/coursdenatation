@@ -135,3 +135,25 @@ Menu
 .ast-desktop .ast-primary-header-bar .main-header-menu > .menu-item {
     line-height: 15px;
 }
+
+/*
+Responsive
+*/
+
+@media screen and (max-width: 600px) {
+    
+    #blogger{
+
+        grid-template-columns: 1fr;
+
+    }
+    .divImg {
+        max-width: 350px;
+      }
+    .btn-primary {
+
+        margin: 1rem 0;
+
+      }
+    
+}
