@@ -46,11 +46,9 @@ get_header(); ?>
     <div class="bloggerfilter">
 
         <div id="blogger"></div>
-       <!--  <div id="loadMoreBtn" class="loadmore btn btn-primary">+ d'articles</div> -->
+        <div id="loadMoreBtn" class="loadmore btn btn-primary">+ d'articles</div>
 
     </div>
-
-
 
     <?php astra_primary_content_bottom(); ?>
 

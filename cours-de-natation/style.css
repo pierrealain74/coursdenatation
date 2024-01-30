@@ -136,6 +136,12 @@ Menu
     line-height: 15px;
 }
 
+.loadmore{
+
+    cursor: pointer;
+    color: white;
+}
+
 /*
 Responsive
 */

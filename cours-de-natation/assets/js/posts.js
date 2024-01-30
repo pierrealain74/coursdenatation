@@ -4,19 +4,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //Catégories des articles
     let cat = '';
+
     // Nombre d'articles à afficher à chaque chargement
-    const articlesParChargement = 4;
+    const articlesParChargement = 2;
     let indiceAffichage = 0;
 
 
-
-    //console.log(all_posts_json);
     const posts4FirstItems = all_posts_json.slice(0, articlesParChargement);
 
     displayPosts(posts4FirstItems);
+    
             
     indiceAffichage += articlesParChargement;
+
     
+    document.getElementById('loadMoreBtn').addEventListener("click", () => {
+
+
+
+        const nextPosts = all_posts_json.slice(indiceAffichage, indiceAffichage + articlesParChargement);
+    
+        if (nextPosts.length > 0) {
+    
+            displayPosts(nextPosts);
+    
+            indiceAffichage += articlesParChargement;
+            console.log('ok : ', indiceAffichage);
+    
+        } else {
+    
+            // Aucun article supplémentaire à charger, désactivez le bouton ou masquez-le
+            document.querySelector(".loadmore").style.display = 'none';
+        }
+
+
+
+    });
     
     function displayPosts(arrayPosts) {
 
@@ -95,19 +118,7 @@ document.addEventListener("DOMContentLoaded", () => {
         loadMoreBt.innerHTML = "Load More";
         bloggerfilterElt.appendChild(loadMoreBt); */
         
-        const nextPosts = posts.slice(indiceAffichage, indiceAffichage + articlesParChargement);
-    
-        if (nextPosts.length > 0) {
-    
-            displayPosts(nextPosts);
-    
-            indiceAffichage += articlesParChargement;
-    
-        } else {
-    
-            // Aucun article supplémentaire à charger, désactivez le bouton ou masquez-le
-            document.querySelector(".loadmore").style.display = 'none';
-        }
+
     
     }
 

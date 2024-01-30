@@ -8,6 +8,36 @@
  * @since 1.0.0
  */
 
+
+ 
+/**
+ * 
+ * Création dun Carousel
+ * Créer un tableau JSON de tous les POST
+ * 
+ */
+
+
+ function create_json_all_post(){
+
+
+    require_once get_stylesheet_directory() . '/php/all_posts_json.php';
+
+}
+
+add_action('wp', 'create_json_all_post');
+
+/**
+* Get the domaine name + https / http
+*/
+function get_the_url_domainename(){
+
+$fullUrl = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
+
+
+}
+add_action('wp_enqueue_scripts', 'get_the_url_domainename');
+
 /**
  * Define Constants
  */
@@ -23,38 +53,6 @@ function child_enqueue_styles() {
 }
 
 add_action( 'wp_enqueue_scripts', 'child_enqueue_styles', 15 );
-
-
-/**
- * 
- * Création dun Carousel
- * Créer un tableau JSON de tous les POST
- * 
- */
-
-
- function create_json_all_post(){
-
-
-        require_once get_stylesheet_directory() . '/php/all_posts_json.php';
-
-}
-
-add_action('wp', 'create_json_all_post');
-
-/**
- * Get the domaine name + https / http
- */
-function get_the_url_domainename(){
-
-	$fullUrl = 'http' . (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 's' : '') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
-	
-
-}
-add_action('wp_enqueue_scripts', 'get_the_url_domainename');
-
-
-
 
 
 
